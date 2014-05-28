@@ -69,8 +69,9 @@ class ProjectsController < ApplicationController
   end
 
   def video
-    project = Project.new(video_url: params[:url])
+    project = Project.new(video_url: params[:url], video_embed_url: params[:url])
     render json: project.video.to_json
+    Rails.logger.info "VIDEO JSON: " + project.video.to_json
   rescue VideoInfo::UrlError
     render json: nil
   end

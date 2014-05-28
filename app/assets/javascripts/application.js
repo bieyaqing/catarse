@@ -19,6 +19,7 @@
 //= require ./lib/skull.js
 //= require ./app/app.js
 //= require ./lib/jquery.sticky.js
+//= require ./app/nav.js
 //= require_tree ./lib
 //= require_tree ./app
 

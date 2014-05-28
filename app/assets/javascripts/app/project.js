@@ -45,3 +45,49 @@ App.addChild('Project', _.extend({
     }
   }
 }, Skull.Tabs));
+
+$(document).ready(function(){
+	$("#project_video_url").attr("onchange","importVideoEmbedUrl()");
+});
+
+function importVideoEmbedUrl(){
+	var url = $("#project_video_url").val();
+	var embed_url = '';
+	var video_id = '';
+	
+	if(url.indexOf("vimeo.com") != -1){
+		video_id = url.split("com/")[1];
+		embed_url = '//player.vimeo.com/video/'+video_id;
+	}else if(url.indexOf("www.youtube.com") != -1){
+		video_id = url.split("=")[1];
+		embed_url = '//www.youtube.com/embed/'+video_id;
+	}
+	
+	$("#project_video_embed_url").val(embed_url);
+}
+
+setInterval(function(){slideToggle("sliderFrame");}, 9000);
+
+var slideIndex = 0;
+function slideToggle(id){
+	$(document).ready(function(){
+		if(slideIndex % 2 == 0){
+			slideLeft(id);
+		}else{
+			slideRight(id);
+		}
+		slideIndex ++;
+	});
+}
+
+function slideLeft(id){
+	$(document).ready(function(){
+		$("#"+id).css("right","0%");
+	});
+}
+
+function slideRight(id){
+	$(document).ready(function(){
+		$("#"+id).css("right","100%");
+	});
+}

@@ -41,10 +41,10 @@ puts 'Seeding the database...'
  end
 
 {
-  company_name: 'Catarse',
-  company_logo: 'http://catarse.me/assets/catarse_bootstrap/logo_icon_catarse.png',
-  host: 'catarse.me',
-  base_url: "http://catarse.me",
+  company_name: 'Weareone',
+  company_logo: '/assets/catarse_bootstrap/logo_icon.png',
+  host: 'localhost',
+  base_url: "/",
 
   email_contact: 'contato@catarse.me',
   email_payments: 'financeiro@catarse.me',
@@ -58,7 +58,7 @@ puts 'Seeding the database...'
   mailchimp_url: "http://catarse.us5.list-manage.com/subscribe/post?u=ebfcd0d16dbb0001a0bea3639&amp;id=149c39709e",
   catarse_fee: '0.13',
   support_forum: 'http://suporte.catarse.me/',
-  base_domain: 'catarse.me',
+  base_domain: 'localhost',
   uservoice_secret_gadget: 'change_this',
   uservoice_key: 'uservoice_key',
   faq_url: 'http://suporte.catarse.me/',

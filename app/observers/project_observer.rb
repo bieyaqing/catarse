@@ -2,12 +2,14 @@ class ProjectObserver < ActiveRecord::Observer
   observe :project
 
   def after_save(project)
+    Rails.logger.info "PROJECT SAVED"
     if project.try(:video_url_changed?)
       ProjectDownloaderWorker.perform_async(project.id)
     end
   end
 
   def after_create(project)
+    Rails.logger.info "PROJECT CREATED"
     deliver_default_notification_for(project, :project_received)
   end
 

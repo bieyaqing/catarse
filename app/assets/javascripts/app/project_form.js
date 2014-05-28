@@ -23,8 +23,22 @@ App.views.ProjectForm.addChild('VideoUrl', _.extend({
   checkVideoUrl: function(){
     var that = this;
     $.get(this.$el.data('path') + '?url=' + encodeURIComponent(this.$el.val())).success(function(data){
-      if(!data || !data.video_id){
+      console.log(data);
+      if(!data || !data.provider.video_id){
         that.$el.trigger('invalid');
+      }else{
+    	  //auto import video embed url
+    	  var embed_url = '';
+    	  var url = data.provider.url;
+    	  var video_id = data.provider.video_id;
+    	  
+    	  if(url.indexOf("vimeo.com") != -1){
+    		  embed_url = '//player.vimeo.com/video/'+video_id;
+    	  }else if(url.indexOf("www.youtube.com") != -1){
+    		  embed_url = '//www.youtube.com/embed/'+video_id;
+    	  }
+    	  
+    	  $('input#project_video_embed_url').val(embed_url);
       }
     });
   },
@@ -44,7 +58,7 @@ App.views.ProjectForm.addChild('Permalink', _.extend({
   checkPermalink: function(){
     var that = this;
     if(this.re.test(this.$el.val())){
-      $.get('/pt/' + this.$el.val()).complete(function(data){
+      $.get('/en/' + this.$el.val()).complete(function(data){
         if(data.status != 404){
           that.$el.trigger('invalid');
         }
@@ -57,4 +71,3 @@ App.views.ProjectForm.addChild('Permalink', _.extend({
     this.setupTimedInput();
   }
 }, Skull.TimedInput));
-

@@ -31,6 +31,9 @@ section.row
 
     = form.input :video_url, as: :text, label: t('submit_project.video_url')
     p = t('submit_project.video_url_hint')
+    
+    = form.input :video_embed_url, as: :text, label: t('submit_project.video_embed_url')
+    p = t('submit_project.video_embed_url_hint')
 
     = form.input :more_links, as: :text, label: t('submit_project.more_links')
     p = t('submit_project.more_links_hint')

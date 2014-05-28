@@ -1,45 +1,99 @@
-footer.footer
+footer.my-footer
   .centered
     .row
       .footer-div
-        .footer-list
-          h3.footer-title= t('footer.titles.contact')
-          ul.footer-list
-            li= link_to t('footer.links.twitter'), "#{CatarseSettings[:twitter_url]}", target: '_blank'
-            li= link_to t('footer.links.facebook'), "#{CatarseSettings[:facebook_url]}", target: '_blank'
-            li= link_to t('footer.links.instagram'), "#{CatarseSettings[:instagram_url]}", target: '_blank'
-            li= link_to t('footer.links.github'), "#{CatarseSettings[:github_url]}", target: '_blank'
-            li= link_to t('footer.links.blog'), "#{CatarseSettings[:blog_url]}", target: '_blank'
-            li.zendesk_widget= link_to t('footer.links.contact'), "#{CatarseSettings[:zendesk_url]}/account/dropboxes/#{CatarseSettings[:zendesk_dropbox_id]}"
+        p.my-footer-font
+          = "Do you have any feedback or suggstions? Drop us a note here or email to"
+        a href="mailto:hi@weareonesingapore.com"
+          | hi@weareonesingapore.com
+        br
+        br
+        p.my-footer-font
+          u
+            = "We Are One Singapore Pte. Ltd. 5 Prince George's Park, National University of Singapore"
+        p.my-footer-font
+          u
+            = "Singapore 118404 "
+            a dataquery="#236q" href="https://goo.gl/maps/FvrHQ" target="_blank" 
+              span.my-footer-map-link
+                | (MAP)
       .footer-div
         .footer-list
-          h3.footer-title= t('footer.titles.about')
+          h3.footer-title= "Home"
           ul.footer-list
-            li= link_to t('footer.links.faq'), "#{CatarseSettings[:faq_url]}", target: '_blank'
-            li= link_to t('footer.links.feedback'), "#{CatarseSettings[:feedback_url]}", target: '_blank'
-            li= link_to t('footer.links.terms'), "#{CatarseSettings[:terms_url]}", target: '_blank'
-            li= link_to t('footer.links.privacy'), "#{CatarseSettings[:privacy_url]}", target: '_blank'
-            //li= link_to t('footer.links.press'), "#{CatarseSettings[:press_url]}", target: '_blank'
+            li= link_to "About Us", "http://www.weareonesingapore.com/#!about-us/c16zo", target: '_blank'
+            li= link_to "How it works", "http://www.weareonesingapore.com/#!how-it-works/c5n0", target: '_blank'
+            li= link_to "Team", "http://www.weareonesingapore.com/#!how-it-started/c1i4x", target: '_blank'
+            li= link_to "Join the team", "http://www.weareonesingapore.com/#!join-us/c1xio", target: '_blank'
       .footer-div
         .footer-list
-          h3.footer-title= t('footer.titles.sitemap')
+          h3.footer-title= "Events"
           ul.footer-list
-            li= link_to t('footer.links.submit'), page_path(:how_it_works)
-            li= link_to t('footer.links.discover'), explore_path
-            - if current_user
-              li= link_to t('footer.links.near'), explore_path(anchor: "near_of/#{current_user.address_state}")
-            li= link_to t('footer.links.recommended'), explore_path(anchor: "recommended")
-            li= link_to t('footer.links.expiring'), explore_path(anchor: "expiring")
-            li= link_to t('footer.links.recents'), explore_path(anchor: "recent")
+            li= link_to "Discover Events", explore_path
+            li= link_to "Crowdfunding", new_project_path
+            / - if current_user
+              / li= link_to t('footer.links.near'), explore_path(anchor: "near_of/#{current_user.address_state}")
+            / li= link_to t('footer.links.recommended'), explore_path(anchor: "recommended")
+            / li= link_to t('footer.links.expiring'), explore_path(anchor: "expiring")
+            / li= link_to t('footer.links.recents'), explore_path(anchor: "recent")
       .footer-div
-        h3.footer-title= t('footer.titles.newsletter')
-        .newsletter-footer
-          = render 'layouts/newsletter'
-        h3.footer-title= t('footer.titles.social')
-        .twitter-box
-          = link_to "Follow @#{CatarseSettings[:twitter_username]}", "http://twitter.com/#{CatarseSettings[:twitter_username]}", :class => 'twitter-follow-button', :"data-button"=>"blue", :"data-text-color" => "#ffffff", :"data-link-color"=>"#fffffff", :"data-width" => "224px"
-        .facebook-box
-          = render_facebook_like href: "", colorscheme: "dark", width: "171"
+        h3.footer-title= "Social networks"
+        a.no-underline href="https://www.facebook.com/weareonesingapore" target="_blank"
+          .my-footer-icon.my-facebook
+        a.no-underline href="http://www.youtube.com/channel/UCKB9VksQ9abByz4v1U1EScA" target="_blank"
+          .my-footer-icon.my-youtube
+        a.no-underline href="https://twitter.com/WeAreOneSgp" target="_blank"
+          .my-footer-icon.my-twitter
+        a.no-underline href="http://web.stagram.com/n/weareonesgp/" target="_blank"
+          .my-footer-icon.my-instagram
     hr
     .row
-        p.copyleft= "#{t('footer.texts.copyleft')} Catarse, 2013 | Open source #{link_to 'Catarse @ Github', "#{CatarseSettings[:github_url]}", :class => 'github', target: '_blank'}".html_safe
+        p.copyleft = "© 2014 by We Are One Singapore"
+
+        
+/ footer.footer
+  / .centered
+    / .row
+      / .footer-div
+        / .footer-list
+          / h3.footer-title= t('footer.titles.contact')
+          / ul.footer-list
+            / li= link_to t('footer.links.twitter'), "#{CatarseSettings[:twitter_url]}", target: '_blank'
+            / li= link_to t('footer.links.facebook'), "#{CatarseSettings[:facebook_url]}", target: '_blank'
+            / li= link_to t('footer.links.instagram'), "#{CatarseSettings[:instagram_url]}", target: '_blank'
+            / li= link_to t('footer.links.github'), "#{CatarseSettings[:github_url]}", target: '_blank'
+            / li= link_to t('footer.links.blog'), "#{CatarseSettings[:blog_url]}", target: '_blank'
+            / li.zendesk_widget= link_to t('footer.links.contact'), "#{CatarseSettings[:zendesk_url]}/account/dropboxes/#{CatarseSettings[:zendesk_dropbox_id]}"
+      / .footer-div
+        / .footer-list
+          / h3.footer-title= t('footer.titles.about')
+          / ul.footer-list
+            / li= link_to t('footer.links.faq'), "#{CatarseSettings[:faq_url]}", target: '_blank'
+            / li= link_to t('footer.links.feedback'), "#{CatarseSettings[:feedback_url]}", target: '_blank'
+            / li= link_to t('footer.links.terms'), "#{CatarseSettings[:terms_url]}", target: '_blank'
+            / li= link_to t('footer.links.privacy'), "#{CatarseSettings[:privacy_url]}", target: '_blank'
+            / //li= link_to t('footer.links.press'), "#{CatarseSettings[:press_url]}", target: '_blank'
+      / .footer-div
+        / .footer-list
+          / h3.footer-title= t('footer.titles.sitemap')
+          / ul.footer-list
+            / li= link_to t('footer.links.submit'), page_path(:how_it_works)
+            / li= link_to t('footer.links.discover'), explore_path
+            / - if current_user
+              / li= link_to t('footer.links.near'), explore_path(anchor: "near_of/#{current_user.address_state}")
+            / li= link_to t('footer.links.recommended'), explore_path(anchor: "recommended")
+            / li= link_to t('footer.links.expiring'), explore_path(anchor: "expiring")
+            / li= link_to t('footer.links.recents'), explore_path(anchor: "recent")
+      / .footer-div
+        / h3.footer-title= t('footer.titles.newsletter')
+        / .newsletter-footer
+          / = render 'layouts/newsletter'
+        / h3.footer-title= t('footer.titles.social')
+        / .twitter-box
+          / = link_to "Follow @#{CatarseSettings[:twitter_username]}", "http://twitter.com/#{CatarseSettings[:twitter_username]}", :class => 'twitter-follow-button', :"data-button"=>"blue", :"data-text-color" => "#ffffff", :"data-link-color"=>"#fffffff", :"data-width" => "224px"
+        / .facebook-box
+          / = render_facebook_like href: "", colorscheme: "dark", width: "171"
+    / hr
+    / .row
+        / p.copyleft= "#{t('footer.texts.copyleft')} Catarse, 2013 | Open source #{link_to 'Catarse @ Github', "#{CatarseSettings[:github_url]}", :class => 'github', target: '_blank'}".html_safe
+        

@@ -16,6 +16,7 @@
         = form.input :category, as: :select, required: false
       - if policy(@project).permitted_for?(:video_url, :update)
         = form.input :video_url, as: :string, hint: t('formtastic.hints.project.video_url_edit'),required: false
+        = form.input :video_embed_url, as: :string, hint: t('formtastic.hints.project.video_embed_url_edit'),required: false
       - if policy(@project).permitted_for?(:uploaded_image, :update)
         = form.input :uploaded_image, as: :file, required: false,
           hint: (@project.uploaded_image.present? ? image_tag(@project.uploaded_image.project_thumb.url, size: '220x172') : t('formtastic.hints.project.uploaded_image') )

@@ -1,6 +1,108 @@
 [data-namespace="null"][data-controller="projects"][data-action="index"]
+  .my-banner-foot
+    background-image: image-url('catarse_bootstrap/promotion.png')
+    background-repeat: no-repeat
+    background-size: 100% 100%
+    height: 450px
+  .my-banner
+    background: image-url('catarse_bootstrap/banner.png') center center
+    height: 600px
+    margin: 0 auto 2em
+    overflow: hidden
+    position: relative
+    .content
+      visibility: visible
+      left: 10px
+      top: 211px
+      width: 100%
+      min-height: 239px
+      position: relative
+      h2
+        text-align: center
+        color: #FFFFFF
+        font-family: helvetica-w01-bold,helvetica-w02-bold,helvetica-lt-w10-bold,sans-serif
+        font-weight: bold
+      .big-text
+        font-size: 60px
+      .small-text
+        font-size: 30px
+  .my-banner-2
+    height: 500px
+    margin: 0 auto 2em
+    overflow: hidden
+    display: block
+    position: relative
+    .content
+      visibility: visible
+      left: 10px
+      top: 100px
+      width: 100%
+      min-height: 239px
+      position: relative
+      h2
+        text-align: center
+        color: rgb(114, 98, 119)
+        font-family: helvetica-w01-bold,helvetica-w02-bold,helvetica-lt-w10-bold,sans-serif
+        //font-weight: bold
+      .big-text
+        font-size: 72px
+      .big-text-small
+        font-size: 50px
+        font-weight: normal
+      .small-text
+        font-size: 30px
+      .my-paragraph
+        display: block
+        width: 70%
+        font-size: 20px
+        font-family: open sans,sans-serif
+        margin-left: auto
+        margin-right: auto
+        line-height: 150%
+      .para-left
+        text-align: left
+  .my-center-image
+    width: 74%
+    margin-left: auto
+    margin-right: auto
+    display: block
+  .no-spacing-block
+    font-size: 0
+  .my-slider
+    height: 500px
+    width: 80%
+    display: inline-block
+    background-color: #FFFFFF
+  .my-blocker
+    position: relative
+    height: 540px
+    width: 10%
+    display: inline-block
+    background-color: #FFFFFF
+    cursor: pointer
+    z-index: 100
+    &:hover
+      background-color: #F4F4F4
+  .my-slider-frame
+    position: relative
+    height: 500px
+    width: 200%
+    -webkit-transition: left 1s /* For Safari 3.1 to 6.0 */
+    transition: left 1s
+    -webkit-transition: right 1s /* For Safari 3.1 to 6.0 */
+    transition: right 1s
+    z-index: 90
+  .img-holder
+    width: 50%
+    display: inline-block
+  .my-img
+    width: 90%
+    display: block
+    margin-left: auto
+    margin-right: auto
+        
   .banner
-    background: image-url('catarse_bootstrap/banner-3years.png') center center
+    background: image-url('catarse_bootstrap/banner.png') center center
     height: 360px
     margin: 0 auto 2em
     overflow: hidden
@@ -32,7 +134,16 @@
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
       &:hover
         background: lighten($blue-one, 5%)
-
+  .my-dot-span
+    display: inline-block
+    text-shadow: #c8c8c8 1px 1px 0px, #b4b4b4 0px 2px 0px, #a0a0a0 0px 3px 0px, rgba(140, 140, 140, 0.498039) 0px 4px 0px, #787878 0px 0px 0px, rgba(0, 0, 0, 0.498039) 0px 5px 10px
+  .dot-red
+    color: rgb(237, 28, 36)
+  .dot-white
+    color: rgb(255, 255, 255)
+  .dot-text
+    font-size: 90px
+    font-weight: bold
   .channel_banner
     width: 100%
     height: 357px

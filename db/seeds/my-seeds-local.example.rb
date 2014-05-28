@@ -25,11 +25,11 @@ puts "Creating Configuration entries..."
 {
   
   catarse_fee: '0.13',
-  company_name: 'Catarse',
+  company_name: 'Weareone',
 
-  host: 'YOUR_HOST',
+  host: 'localhost',
   base_domain: 'YOUR_DOMAIN',
-  base_url: "YOUR_BASE_URL",
+  base_url: "/",
 
   facebook_url: "http://facebook.com/MY-FACEBOOK-PAGE",
   facebook_app_id: '556758001037275',

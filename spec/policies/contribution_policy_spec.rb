@@ -83,7 +83,7 @@ describe ContributionPolicy do
   describe "#permitted?" do
     let(:policy){ ContributionPolicy.new(user, build(:contribution)) }
     subject{ policy }
-
+    
     %i[user_attributes user_id user payment_service_fee payment_id].each do |field|
       it{ should_not be_permitted(field) }
     end

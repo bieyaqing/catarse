@@ -4,20 +4,65 @@ en:
     projects:
       index:
         by_state: 'By state'
-        between_created_at: 'Created at between'
-        submit: 'Filter'
-        send_to_trash: 'Delete'
+        with_state: 'By state'
+        by_category: 'By category'
+        project: 'Project'
+        user: 'User'
+        between_created_at: 'Created between'
+        goal_between: 'Between goal'
+        between_expires_at: 'Expire between'
+        between_online_date: 'Created between'
+        between_updated_at: 'Updated between'
+        by_user_email: 'Email the director'
+        id: ID
+        name: 'Title'
+        send_to_trash: "Delete"
         send_to_draft: 'Send to DRAFT!'
         reject: 'Reject!'
         approve: 'Approve!'
+        user_id: 'User ID'
+        goal: 'Goal'
+        total_contributions: 'Contributions'
+        online_date: 'Created date'
+        pledged: 'Achieved'
+        recommended: 'Recommended?'
+        state: 'State'
+        no_projects: 'No projects found'
+        menu: 'Admin projects'
+        title: 'Project management'
+        total_projects: 'projects'
+        submit: 'filter'
+        expires_at: 'Finishes on'
+        category: 'Category'
+        order_table: 'Sort table'
+        order_date: 'Date of dispatch'
         order_asc: 'Goal asc'
         order_desc: 'Goal desc'
         order_created_at: 'Submission date'
-        last_modification: 'Last update'
+        last_modification: 'Last Updated'
     financials:
       index:
-        submit: 'Filter'
+        id: ID
+        name: 'Title'
+        user: 'User MoIP'
+        user_id: 'User ID'
+        goal: 'Goal'
+        total_payment_service_fee: 'Rate of MP'
+        total_catarse_fee: 'Rate of Catharsis'
+        repass_value: 'Vl. Transfer'
+        expires_at: 'Finishes'
+        online_date: 'Created date'
+        pledged: 'Achieved'
+        recommended: 'Recommended?'
+        state: 'State'
+        menu: 'Financials'
+        title: 'Financial Reports'
+        contribution_report: "Report contributors"
+        search_report: "Report search"
+        total_projects: 'projects'
+        submit: 'filter'
         by_state: 'By state'
+        between_expires_at: 'Expire between'
         by_progress: By progress %
     users:
       index:
@@ -107,3 +152,4 @@ en:
   channels:
     admin:
       <<: *admin
+      

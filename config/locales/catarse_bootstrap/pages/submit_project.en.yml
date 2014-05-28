@@ -27,6 +27,9 @@ en:
 
     video_url: "Vídeo"
     video_url_hint: "Paste here the URL of your Youtube or Vimeo video."
+    
+    video_embed_url: "Video embed"
+    video_embed_url_hint: "Auto abstracted by Javascript"
 
     more_links: "List project related links"
     more_links_hint: "Which channels will be used to spread the word about your project? List here your facebook/twitter/blog/site/ and what ever more links you have to help you."

@@ -19,6 +19,8 @@ module Shared::VideoHandler
     end
 
     def update_video_embed_url
+      Rails.logger.info "UPDATE VIDEO EMBED URL"
+      
       self.video_embed_url = self.video.embed_url if self.video_valid?
       self.save
     end
